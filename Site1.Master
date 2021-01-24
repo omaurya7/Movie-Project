@@ -1,0 +1,41 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="project_702.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style>
+        body{
+           background-color:burlywood;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <asp:Menu ID="Menu1" Orientation="Horizontal" BackColor="#cc0000" ForeColor="#00cc00" Font-Size="XX-Large" runat="server" StaticSubMenuIndent="16px">
+                <DynamicHoverStyle Font-Names="Algerian" Font-Size="Larger" />
+                <Items>
+                    <asp:MenuItem NavigateUrl="~/Home.aspx" Text="Home" Value="Home"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/Movies.aspx" Text="Movies" Value="Movies">
+                        <asp:MenuItem NavigateUrl="~/Action.aspx" Text="Action" Value="Action"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Comedy.aspx" Text="Comedy" Value="Comedy"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Rom.aspx" Text="Romance" Value="Romance"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Drama.aspx" Text="Drama" Value="Drama"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Horror.aspx" Text="Horror" Value="Horror"></asp:MenuItem>
+                    </asp:MenuItem>
+                    
+                   
+                    
+                    <asp:MenuItem NavigateUrl="~/addM.aspx" Text="Add-Movies" Value="Add Movies"></asp:MenuItem>
+                </Items>
+            </asp:Menu>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
